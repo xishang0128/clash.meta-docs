@@ -1,4 +1,4 @@
-# 一般的yaml语法
+# 一般的clash语法
 
 ## 注释
 
@@ -19,8 +19,40 @@ socks-port: 7891
 [aaaa::a8aa:ff:fe09:57d9]:853 # 带端口的IPV6地址
 ```
 
-## 通配符 ＊
+## 域名通配符
+
+### 通配符 ＊
 
 clash的通配符 \* 一次只能匹配一级域名
 
-\*.baudu.com 只匹配 tieba.baidu.com 而不匹配 123.tieba.baidu.com huzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhehuzhezhehuzhehuzhehuzhehuzhehuzhehuzhehuz
+\*.baudu.com 只匹配 tieba.baidu.com 而不匹配 123.tieba.baidu.com 或者 baidu.com
+
+### 通配符 +
+
+通配符 ＋ 类似DOMAIN-SUFFIX,可以一次性匹配多个级别
+
+＋.baudu.com 匹配 tieba.baidu.com 和 123.tieba.baidu.com 或者 baidu.com
+
+通配符 ＋ 只能用于域名前缀匹配
+
+### 通配符 .
+
+通配符 . 可以一次性匹配多个级别
+
+.baudu.com 匹配 tieba.baidu.com 和 123.tieba.baidu.com, 但不能匹配 baidu.com
+
+通配符 . 只能用于域名前缀匹配
+
+### 使用示例
+
+使用通配符时,应当使用引号 ‘ ’ 将内容包裹起来，以免过度匹配
+
+
+
+```
+fake-ip-filter:
+  - '.lan'
+  - 'xbox.*.microsoft.com'
+  - '+.xboxlive.com'
+  - localhost.ptlogin2.qq.com
+```

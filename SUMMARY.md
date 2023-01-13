@@ -2,14 +2,14 @@
 
 * [介绍](README.md)
 
-## 新功能 <a href="#new function" id="new function"></a>
+## 新功能 <a href="#new-function" id="new-function"></a>
 
 * [Page 1](<new function/page-1.md>)
 
 ## 配置文件 <a href="#config" id="config"></a>
 
 * [完整配置示例](config/config.md)
-* [一般的yaml语法](config/yaml.md)
+* [一般的clash语法](config/yaml.md)
 * [全局配置](config/general.md)
 * [缓存](config/profile.md)
 * [嗅探](config/sniffer.md)
