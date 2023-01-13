@@ -23,6 +23,3 @@
 * [子规则](config/sub-rules.md)
 * [流量入站](config/listeners.md)
 * [隧道](config/tunnels.md)
-* [ebpf](config/ebpf.md)
-* [实验性](config/experimental.md)
-* [tls](config/tls.md)
