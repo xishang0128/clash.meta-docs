@@ -17,7 +17,7 @@
 * [hosts](config/hosts.md)
 * [代理](config/proxies.md)
 * [代理集合](config/proxy-providers.md)
-* [策略组](config/ce-lve-zu.md)
+* [策略组](config/proxy-groups.md)
 * [规则](config/rules.md)
 * [规则集合](config/rule-providers.md)
 * [子规则](config/sub-rules.md)
