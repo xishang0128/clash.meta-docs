@@ -12,7 +12,7 @@
 * [一般的clash语法](config/yaml.md)
 * [全局配置](config/general.md)
 * [嗅探](config/sniffer.md)
-* [DNS](config/dns/README.md)
+* [DNS](config/dns.md)
   * [hosts](config/dns/hosts.md)
 * [代理](config/proxies.md)
 * [代理集合](config/proxy-providers.md)

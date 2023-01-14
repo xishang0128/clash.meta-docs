@@ -50,12 +50,55 @@ dns:
 
 ### enable
 
-可选值 \`true/false\`&#x20;
+可选值 `true/false`
 
 是否启用,如为false，则使用系统dns解析
 
 ### prefer-h3
 
-true
+可选值 `true/false`
 
 是否开启DOH的http/3
+
+### listen
+
+dns服务监听
+
+### enhanced-mode
+
+可选值 `fake-ip / redir-host`
+
+clash的dns处理模式
+
+### fake-ip-range
+
+格式为 `ip/掩码`
+
+fakeip下的IP段设置, tun网卡的默认ip也使用此值
+
+### fake-ip-filter
+
+fakeip过滤,以下地址不会下发fakeip映射用于连接
+
+### use-hosts
+
+可选值 `true/false`
+
+是否查询系统hosts
+
+### default-nameserver
+
+默认dns
+
+用于解析 `nameserver/fallback/proxy-server-nameserver` 的域名
+
+必须为ip,可为加密dns
+
+```
+default-nameserver:
+  - 114.114.114.114
+  - 8.8.8.8
+  - tls://223.5.5.5:853
+  - https://223.5.5.5/dns-query
+```
+
