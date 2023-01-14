@@ -20,7 +20,7 @@ mixed-port: 7892
 ```
 
 {% hint style="info" %}
-redir和tproxy端口仅限Linux以及MacOS适用 (Android设备属于Linux设备)
+redir端口仅限Linux以及MacOS适用,tproxy端口仅限linux适用 (Android设备属于Linux设备)
 {% endhint %}
 
 ```
