@@ -33,9 +33,45 @@ tproxy－port: 7894
 
 ## 允许局域网
 
+允许其他设备经过clash的代理端口访问互联网
+
+```
+allow-lan: true
+# 可选值 true/false
+
+bind-address: "*"
+# 绑定IP,仅允许某个IP访问代理端口
+# "*" 绑定所有IP地址,默认值,不填写此项则绑定全部
+# 192.168.31.31:  绑定单个IPV4地址
+# "[aaaa::a8aa:ff:fe09:57d8]":  绑定单个IPV6地址
+
+authentication:
+  - "user1:pass1"
+  - "user2:pass2"
+# http(s) 和 socks5 代理的用户验证
+```
+
 ## 运行模式
 
+```
+mode: rule
+# rule(规则) / global(全局) / direct(直连)
+# 此项拥有默认值,默认为规则模式
+```
+
 ## 日志级别
+
+clash内核输出日志的等级,仅在控制台和控制页面输出
+
+```
+log－level: info
+# 各个等级
+# silent  静默,不输出
+# error 仅输出发生错误至无法使用的日志
+# warning 输出发生错误但不影响运行的日志,以及error级别内容
+# info 输出一般运行的内容,以及error和warning级别的日志
+# debug 尽可能的输出运行中所有的信息
+```
 
 ## IPV6
 
