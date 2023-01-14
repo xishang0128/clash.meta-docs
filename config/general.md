@@ -13,10 +13,10 @@ port: 7890
 # http(s) 代理端口
 
 socks-port: 7891
-# socks5 代理端口
+# socks4/4a/5 代理端口
 
 mixed-port: 7892
-# 混合代理端口 http(s)+socks5
+# 混合代理端口 http(s)+socks
 ```
 
 {% hint style="info" %}
@@ -48,7 +48,7 @@ bind-address: "*"
 authentication:
   - "user1:pass1"
   - "user2:pass2"
-# http(s) 和 socks5 代理的用户验证
+# http(s) 和 socks 代理的用户验证
 ```
 
 ## 运行模式
@@ -86,15 +86,14 @@ ipv6: true
 
 外部控制器可以使用RESTful API来控制你的clash
 
-```
-external-controller: 127.0.0.1:9090 
+<pre><code>external-controller: 127.0.0.1:9090 
 # API 监听地址,你可以将127.0.0.1修改为0.0.0.0来监听所有IP
-xternal-controller-tls: 127.0.0.1:9443
-# API HTTPS 监听地址，需要配置 tls 部分配置文件
+<strong>external-controller-tls: 127.0.0.1:9443
+</strong># API HTTPS 监听地址，需要配置 tls 部分配置文件
 
 secret: ""
 # API 的密码
-```
+</code></pre>
 
 ## 外部用户界面
 
