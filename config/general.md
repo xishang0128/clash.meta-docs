@@ -13,7 +13,7 @@ port: 7890
 # http(s) 代理端口
 
 socks-port: 7891
-# soack5 代理端口
+# socks5 代理端口
 
 mixed-port: 7892
 # 混合代理端口 http(s)+socks5
@@ -75,13 +75,47 @@ log－level: info
 
 ## IPV6
 
-## 外部控制器
+```
+ipv6: true
+# 可选值 true/false
+# 是否允许内核接受ipv6流量
+```
+
+## 外部控制(API)
+
+外部控制器可以使用RESTful API来控制你的clash
+
+```
+external-controller: 127.0.0.1:9090 
+# API 监听,你可以将127.0.0.1修改为0.0.0.0来监听所有IP
+
+secret: ""
+# API 的密码
+```
 
 ## 外部用户界面
 
+可以将静态网页资源(比如clash-dashboard)运行在clash API,路径为 API地址/ui
+
+```
+external-ui: ./dashboard
+# 可以为绝对路径,或者clash工作目录的相对路径
+```
+
 ## 出站接口
 
+```
+interface-name: en0
+# clash的流量出站接口
+```
+
 ## 路由标记
+
+为Linux下的出站连接提供默认流量标记
+
+```
+routing-mark: 6666
+```
 
 ## TLS
 
