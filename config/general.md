@@ -79,6 +79,7 @@ log－level: info
 ipv6: true
 # 可选值 true/false
 # 是否允许内核接受ipv6流量
+# 默认为false
 ```
 
 ## 外部控制(API)
@@ -87,7 +88,9 @@ ipv6: true
 
 ```
 external-controller: 127.0.0.1:9090 
-# API 监听,你可以将127.0.0.1修改为0.0.0.0来监听所有IP
+# API 监听地址,你可以将127.0.0.1修改为0.0.0.0来监听所有IP
+xternal-controller-tls: 127.0.0.1:9443
+# API HTTPS 监听地址，需要配置 tls 部分配置文件
 
 secret: ""
 # API 的密码
@@ -118,5 +121,15 @@ routing-mark: 6666
 ```
 
 ## TLS
+
+目前仅用于API的https
+
+```
+tls:
+  certificate: string # 证书 PEM 格式，或者 证书的路径
+  private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
+```
+
+## EBPF模块
 
 ## 实验性
