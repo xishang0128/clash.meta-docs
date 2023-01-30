@@ -55,5 +55,4 @@ fake-ip-filter:
   - 'xbox.*.microsoft.com'
   - '+.xboxlive.com'
   - localhost.ptlogin2.qq.com
-  
 ```
