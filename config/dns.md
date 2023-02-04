@@ -27,6 +27,7 @@ dns:
   nameserver-policy:
     'www.baidu.com': '114.114.114.114'
     '+.internal.crop.com': '10.0.0.1'
+    'geosite:cn': https://doh.pub/dns-query
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
