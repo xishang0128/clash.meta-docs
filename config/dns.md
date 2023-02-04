@@ -144,7 +144,7 @@ default-nameserver:
 
 ### nameserver-policy
 
-指定域名查询的解析服务器,可使用 geosite
+指定域名查询的解析服务器,可使用 geosite,优先于`nameserver/fallback`
 
 ```
 nameserver-policy:
