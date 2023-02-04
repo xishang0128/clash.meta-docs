@@ -130,7 +130,7 @@ use-hosts: true
 
 ### default-nameserver
 
-默认dns,用于解析 `nameserver/fallback/proxy-server-nameserver` 的域名
+默认dns,用于解析 DNS服务器 的域名
 
 必须为ip,可为加密dns
 
@@ -140,6 +140,17 @@ default-nameserver:
   - 8.8.8.8
   - tls://223.5.5.5:853
   - https://223.5.5.5/dns-query
+```
+
+### nameserver-policy
+
+指定域名查询的解析服务器,可使用 geosite
+
+```
+nameserver-policy:
+  'www.baidu.com': '114.114.114.114'
+  '+.internal.crop.com': '10.0.0.1'
+  'geosite:cn': https://doh.pub/dns-query
 ```
 
 ### nameserver
