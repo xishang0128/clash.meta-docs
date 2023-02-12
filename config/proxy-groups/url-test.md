@@ -11,9 +11,9 @@ proxy-groups:
   - name: "自动选择"
     type: url-test
     proxies:
-      - ss1
-      - ss2
-      - vmess1
+      - ss
+      - ss
+      - vmess
     url: 'https://www.gstatic.com/generate_204'
     interval: 300
    #tolerance: 50
