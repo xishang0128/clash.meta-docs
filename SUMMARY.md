@@ -33,6 +33,7 @@
   * [自动回退](config/proxy-groups/fallback.md)
   * [负载均衡](config/proxy-groups/load-balance.md)
   * [链式代理](config/proxy-groups/relay.md)
+  * [指定接口以及路由标记](config/proxy-groups/interface-name-and-routing-mark.md)
 * [代理集合](config/proxy-providers.md)
   * [引用代理集](config/proxy-providers/use.md)
   * [筛选代理集](config/proxy-providers/filter.md)
