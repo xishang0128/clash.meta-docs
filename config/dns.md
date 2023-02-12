@@ -28,7 +28,6 @@ dns:
     'www.baidu.com': '114.114.114.114'
     '+.internal.crop.com': '10.0.0.1'
     'geosite:cn': https://doh.pub/dns-query
-    'www.baidu.com': [https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
@@ -147,14 +146,11 @@ default-nameserver:
 
 指定域名查询的解析服务器,可使用 geosite,优先于`nameserver/fallback`
 
-可以指定多个DNS,书写为数组
-
 ```
 nameserver-policy:
   'www.baidu.com': '114.114.114.114'
   '+.internal.crop.com': '10.0.0.1'
   'geosite:cn': https://doh.pub/dns-query
-  'www.baidu.com': [https://doh.pub/dns-query,https://dns.alidns.com/dns-query]
 ```
 
 ### nameserver
