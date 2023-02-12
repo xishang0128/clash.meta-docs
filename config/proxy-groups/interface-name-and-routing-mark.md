@@ -27,3 +27,4 @@ proxy-groups:
       - DIRECT
 ```
 
+优先级: 代理节点 > 代理策略 > 全局
