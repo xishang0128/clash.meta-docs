@@ -8,6 +8,11 @@ description: 可以为策略组指定出站接口以及出站流量标记
 
 ```
 proxy-groups:
+    - name: "直连"
+    type: select
+    proxies:
+      - "en0直连"
+      - "en1直连"
   - name: "en1直连"
     type: select
     interface-name: en1
@@ -20,10 +25,5 @@ proxy-groups:
     routing-mark: 11451
     proxies:
       - DIRECT
-  - name: "直连"
-    type: select
-    proxies:
-      - "en0直连"
-      - "en1直连"
 ```
 
