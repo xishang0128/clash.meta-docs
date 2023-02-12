@@ -20,9 +20,8 @@ proxy-groups:
     routing-mark: 11451
     proxies:
       - DIRECT
-  - name: "直连接口选择"
+  - name: "直连"
     type: select
-    interface-name: en1
     proxies:
       - "en0直连"
       - "en1直连"
